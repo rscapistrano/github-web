@@ -2,6 +2,9 @@
 Sample file of exercises
 */
 
+
+// Create an Object
+
 var animal1 = {
    'genus'        : 'cat',
    'species'      : 'biter',
@@ -11,6 +14,35 @@ var animal1 = {
    'noisy'        : false,
    'deadly'       : true
 }
+
+// Identify Object Value
+animal1['quote']
+
+// or 
+animal1.quote
+
+// Display a value in html page
+document.body.innerText = animal1.quote
+
+
+// Adding a property to an Object
+animal1.whereItLives = 'manhattan highrise';
+// or
+Animal1['whereItLives'] = 'manhattan highrise';
+
+// Deleting a property to an Object
+delete animal1.color;
+
+
+
+
+
+/* References
+	• This statement does not make the same copy of an object so changes to animal2 will apply to animal1.
+	• This gives you two objects that point to the same value. You will only run into this when dealing with objects.
+	• To copy an object, you will need to create another variable with the same properties.
+*/ 
+var animal2 = animal1;
 
 
 
@@ -137,3 +169,39 @@ for (i = 0; i < pageNames.length; i+= 1) {
 		console.log('We are not here: ' + currentPageTitle);
 	}
 }
+
+
+
+
+
+/* For Loops - Enumerative
+   	Used for arrays and objects
+	It's NOT adviced to use a 'for in' loop for an array since in an array, the order is important
+	You can use it on other objects.
+*/
+
+// iterate over an array
+
+var pageNames = ['Home', 'About Us', 'Contact Us', 'JavaScript Playground', 'News', 'Blog'];
+
+for (var p in pageNames) {
+	console.log(p + ' is ' + pageNames[p]);
+}
+
+
+// iterate over an object
+
+var pages = {
+	first  : 'Home',
+	second : 'About Us',
+	third  : 'Contact Us',
+	fourth : 'JavaScript Playground',
+	fifth  : 'Blog'
+};
+
+for (var p in pages) {
+	if (pages.hasOwnProperty(p)) {
+		console.log(p + ' is ' + pages[p]);
+	}
+}
+
