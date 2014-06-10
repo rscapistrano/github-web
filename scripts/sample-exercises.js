@@ -189,7 +189,7 @@ for (var p in pageNames) {
 }
 
 
-// iterate over an object
+// Iterate over an object
 
 var pages = {
 	first  : 'Home',
@@ -205,3 +205,27 @@ for (var p in pages) {
 	}
 }
 
+
+
+
+
+
+/* WHILE LOOPS
+When do you use a while loop?
+When you don't know how many times you need to loop over something. Don't know the end point.
+*/
+
+var i = 0;
+while (i < 10) {
+	console.log(i + '... this will go until we hit 10.');
+	i += 1;
+}
+
+// Another example
+var myArray = [true, true, true, false, true, true]
+
+var myItem = null;
+while (myItem !== false) {
+	console.log('myArray has ' + myArray.length + ' items now. this loop will go on until we pop a false.');
+	myItem = myArray.pop();
+}
