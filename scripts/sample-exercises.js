@@ -229,3 +229,141 @@ while (myItem !== false) {
 	console.log('myArray has ' + myArray.length + ' items now. this loop will go on until we pop a false.');
 	myItem = myArray.pop();
 }
+
+/* DO WHILE LOOP
+	If you set myItem to one of the values in the array, it will not execute
+	In this case, use a 'do while loop' so the code gets executed at least once
+*/ 
+var myArray = [true, true, true, false, true, true];
+
+var myItem = false;
+  do {
+	console.log('myArray has ' + myArray.length + ' items now. this loop will go on until we pop a false.');
+	myItem = myArray.pop();
+} while (myItem !== false);
+
+
+// How to lock your web browser with an infinite loop...just for fun.
+counter = 1;
+while (true) {
+	console.log(counter);
+	counter ++;
+	break; 		// Comment out the break for funtimes. 
+				// Ok, that was fun. Don't do that again.
+}
+
+
+
+
+
+/* BASIC FUNCTIONS
+*/
+
+// Things that Teega likes to do
+
+console.log('bite');
+console.log('eat bif');
+console.log('chase flies');
+console.log('look cute for bif and sleep');
+
+// Create a function to wrap up those 4 lines above so I can use them over and over again.
+
+function teegaActivities() {
+	console.log('bite');
+	console.log('eat bif');
+	console.log('chase flies');
+	console.log('look cute for bif and sleep');
+}
+
+// Invoke the function
+teegaActivities();
+
+
+// Case 1: Time for something real that we can do with functions - Modify Data
+
+function fuddify(speech) {
+	// If it's not a string, return an error message
+	if (typeof speech	!== 'string') return 'Nice twy, wabbit!';
+
+	// Otherwise, make it sound like Elmer Fudd
+	speech = speech.replace(/r/g, 'w');
+	speech - speech.replace(/R/g, 'w');
+	return speech;
+}
+
+// Process a string immediately and assign it to a variable
+var utterance = fuddify('You screwy rabbit.')
+
+
+// Case 2: Answer to a question that we ask over and over again
+
+function isOdd(num) {
+	if (num % 2 === 0) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function isEven(num) {
+	if (num % 2 !== 0) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+
+
+// Arguments and Functions: What to say and how many times to say it?
+
+function saySomething(sayWhat, howMany) {
+	// This pattern works for default values
+	// Check if the argument is undefined, and if it is, provide a default value
+
+	var sayWhat = (typeof sayWhat !== 'undefined') ? sayWhat : 'Blah, blah, blah...';
+	var howMany = (typeof howMany !== 'undefined') ? howMany : 10;
+
+	for (var i = 0, i < howMany; i += 1) {
+		console.log(sayWhat + " (" + i + ")");
+	}
+}
+
+// Adding Machine
+
+function addingMachine() {
+	// Initialize the total we'll be returning
+	var total = 0;
+
+	for (var i = 0; i < arguments.length; i += 1) {
+		// Grab the next number
+		var number	= arguments[i];
+
+		// Check if the argument is a number
+		// If so, add it to the running total
+		if (typeof number === 'number') {
+			total += number;
+		}
+	}
+
+	// Done - Return the total
+	return total;
+}
+
+// Invoke the function
+addingMachine (1,2,12,45,20)
+
+
+
+
+
+// OBJECT, REFERENCES, FUNCTIONS
+
+
+
+
+
+
+
+
+
