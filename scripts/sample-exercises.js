@@ -257,6 +257,8 @@ while (true) {
 
 
 /* BASIC FUNCTIONS
+	Functions are all objects in JavaScript
+	You can pass functions into other functions; they can be passed around as values
 */
 
 // Things that Teega likes to do
