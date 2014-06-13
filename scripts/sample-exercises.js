@@ -1,6 +1,28 @@
 /*
-Sample file of exercises
+JavaScript
+	- Weak typing
+
+Operators with =
+	= assignment
+	== equality (values can be equal, but type can be different)
+	=== strict equality  (values and types must be the same)
 */
+
+
+
+
+// Call Prompt in JS
+var name = prompt('What is your name?');
+alert('Hello, ' + name);
+
+
+// Create Variables
+// Leaving out 'var' creates a global variable and future headaches
+
+var cat = 'Teega', colorFur = 'Undecided', favortiteCatFoor = 'Bif';
+
+
+
 
 
 // Create an Object
@@ -64,6 +86,49 @@ console.log( regex.test(string3) );
 
 
 
+/* CONDITIONAL CODE
+
+{ braces - code block }
+
+if ( condition ) {
+	your conditional code goes here..
+}
+*/
+
+// Simple If Statement
+var a = 5;
+var b = 10;
+
+if ( a < b ) {
+	alert('Yes, a is less than b.');
+}
+
+if ( a > b ) {
+	alert('Yes, a is greater than b.');
+}
+
+if ( a === b ) {
+	alert('a and b are exactly equal');
+}
+
+
+
+// Complex Conditions
+
+var balance = 0;
+
+if ( balance > 0 ) {
+
+	alert('The balance is positive');
+
+} else {
+	alert('Panic attack coming in 3, 2, 1...');
+}
+
+
+
+
+
 // Conditional Ifs
 
 var	answer = window.promt('Type YES, NO, or MAYBE. Then click Ok.');
@@ -80,7 +145,32 @@ var	answer = window.promt('Type YES, NO, or MAYBE. Then click Ok.');
 
 
 
-// Conditionals Switch
+/* Conditionals Switch
+	This is best used when you have several cases.
+*/ 
+
+var gasGrade = 'Premium';
+
+switch ( gasGrade ) {
+	case 'Regular' :
+			alert('It is $3.15');
+			break;   // Jump us out of the switch statement and move on to the next.
+
+	case 'Premium' :
+			alert('It is $3.35');
+			break;
+
+	case 'Diesel'  :
+			alert('It is $3.47');
+			break;
+
+	default        :
+			alert('Unknown gas grade');
+			break;    // Not necessary because we are at the very end.
+}
+
+
+
 
 var	answer = window.promt('Type YES, NO, or MAYBE. Then click Ok.');
 
@@ -102,6 +192,9 @@ Switch (answer) {
 		console.log('This game is over.');
 		break;
 }
+
+
+
 
 
 
@@ -359,7 +452,21 @@ addingMachine (1,2,12,45,20)
 
 
 
-// OBJECT, REFERENCES, FUNCTIONS
+// Understanding Variable Scope
+
+var myNum = 32;
+var myResult = 'Success';
+
+function randomizer(limit) {
+
+	var myNum = Math.floor(Math.random() * limit);
+
+	console.log('myNum is ' + myNum);
+	console.log('Global myNum is ' + window.myNum);
+
+	return myNum;
+}
+
 
 
 
