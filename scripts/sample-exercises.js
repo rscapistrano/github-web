@@ -8,6 +8,17 @@
  */
 
 
+/**
+ * Splitting code into different files
+ *   Linking to multiple JavaScript files
+ *   	<script src = 'script.js'></script>
+ *   	<script src = 'script2.js'></script>
+ *   	<script src = 'script3.js'></script>
+ *
+ *   Order is important
+ *   
+ */
+
 
 
 // Call Prompt in JS
@@ -198,15 +209,12 @@ Switch (answer) {
 
 
 
-
-
 // Terse Ifs: One-liners
 
 var	cherub = 'Cupid'
   // cherub = 'Some other guy'
 
 if (cherub === 'Cupid') console.log('Ouch, an arrow! Oh, I\'m in love!')
-
 
 
 
@@ -224,13 +232,66 @@ animal === 'cat' ? console.log('You will be a cat herder') : console.log('You wi
 
 
 
+/**
+ * Iteration
+ * 	 Keep repeating statements multiple times.
+ * 	 The main issue with loops is not when to loop, it's when to stop.
+ * 	 If we need to loop 1000 times, who is keeping track?
+ * 	 All loops contain conditions that control how long or many times they loop.
+ */
+
+
+// Example: replace if with 'while'
+var a = 1
+
+while ( a < 10 ) {
+	alert(a)		// If you don't add something to change the value of a, you're going to be dizzy
+	a++				// So you need to a line to increment the value 'a'
+}
+
+
+
+/**
+ * Example: add 100 to amount 10 times
+ *
+ * Checklist for a loop
+ * 	1. create an index
+ * 	2. check condition
+ * 	3. increment index
+ * 	
+ */
+
+var amount = 0
+
+// 1. create index
+var i = 0
+
+// 2. check condition
+while ( i < 10 ) {
+	amount = amount + 100
+
+	// 3. increment the index
+	i++
+}
+
+alert( 'The value is ' + amount )
+
+
+
+
+/**
+ * For Loops - Enumerative
+ * Used for arrays and objects
+ * It's NOT adviced to use a 'for in' loop for an array since in an array, the order is important
+ * You can use it on other objects.
+ */
+
+
 // For Loops - Sequencial
 
 for (var i = 0 i < 100 i ++ 1) {
 	console.log(i)
 }
-
-
 
 
 
@@ -248,8 +309,6 @@ for (i = 0 i < pageNames.length i+= 1) {
 
 
 
-
-
 // Replace redundancy
 var pageNames = ['Home', 'About Us', 'Contact Us', 'JavaScript Playground', 'News', 'Blog']
 
@@ -263,16 +322,6 @@ for (i = 0 i < pageNames.length i+= 1) {
 	}
 }
 
-
-
-
-
-/**
- * For Loops - Enumerative
- * Used for arrays and objects
- * It's NOT adviced to use a 'for in' loop for an array since in an array, the order is important
- * You can use it on other objects.
- */
 
 // iterate over an array
 
@@ -298,8 +347,6 @@ for (var p in pages) {
 		console.log(p + ' is ' + pages[p])
 	}
 }
-
-
 
 
 
@@ -459,6 +506,59 @@ function saySomething(sayWhat, howMany) {
 
 
 
+
+/**
+ * Tells me the value of a variable
+ * @return {num}
+ */
+function myFunction () {
+	var a = 5
+	var b = 10
+	var c = 20
+	var d = a + b + c
+	alert( 'The value of d is: ' + d )
+}
+
+// Call the function
+myFunction()
+
+
+
+/**
+ * Setting parameters and arguments
+ */
+
+function addTwoNumbers(num1, num2) {
+	var result = num1 + num2
+	alert(result)
+}
+
+// Call function
+addTwoNumbers (5,25)
+
+
+/**
+ * Return results instead of pop up
+ * @param {num} num1
+ * @param {num} num2
+ */
+function addTwoNumbers(num1, num2) {
+	var result = num1 + num2
+	return result
+}
+
+// Call function; change each call to variables with the answers in pop up
+var x = addTwoNumbers (1,13)
+alert(x)
+
+var y = addTwoNumbers (29,56)
+alert(y)
+
+var z = addTwoNumbers (75,67)
+alert (z)
+
+
+
 /**
  * It adds all the entered inputs
  * @return {number}
@@ -489,8 +589,13 @@ addingMachine (1,2,12,45,20)
 
 
 
+/**
+ * Understanding Variable Scope
+ * 	 Local Variable - When defining a variable within a function, that variable is only available within that function
+ * 	 Global Variable - When a variable is defined outside of a function, then that variable can be called from anywhere
+ */
 
-// Understanding Variable Scope
+
 /**
  * Random number
  * @type {Number}
@@ -515,32 +620,11 @@ function randomizer(limit) {
 }
 
 
-/**
- * Tells me the value of a variable
- * @return {num}
- */
-function myFunction () {
-	var a = 5
-	var b = 10
-	var c = 20
-	var d = a + b + c
-	alert( 'The value of d is: ' + d )
-}
-
-// Call the function
-myFunction()
 
 
 
-/**
- * Setting parameters and arguments
- */
 
-function addTwoNumbers(num1, num2) {
-	var result = num1 + num2
-	alert(result)
-}
 
-addTwoNumbers (5,25)
+
 
 
