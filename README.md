@@ -1,4 +1,4 @@
 github-web
 ==========
 
-Remote repo test Illustrator file changes.
+Used to track my JavaScript exercises.
