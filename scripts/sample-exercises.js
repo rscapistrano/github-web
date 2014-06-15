@@ -11,7 +11,7 @@
 /**
  * Splitting code into different files
  *   Linking to multiple JavaScript files
- *   	<script src = 'script.js'></script>
+ *   	<script src = 'script1.js'></script>
  *   	<script src = 'script2.js'></script>
  *   	<script src = 'script3.js'></script>
  *
@@ -382,6 +382,18 @@ while (myItem !== false) {
  */
 	
  
+// Basic Structure
+
+var a = 1 				// setup index
+do {
+	// your code
+	a++ 				// increment index
+} while ( a < 10 )  	// check condition
+
+
+
+// Example 
+
 var myArray = [true, true, true, false, true, true]
 
 var myItem = false
@@ -618,6 +630,116 @@ function randomizer(limit) {
 
 	return myNum
 }
+
+
+
+
+/**
+ * Addition vs Concatenation
+ * Arithmetic operations on mixed types
+ */
+
+
+// Mixing string with number
+
+var foo = 5
+var bar = '5'
+alert ( foo + bar )		// treated as a string, output is 55
+
+var foo = 5
+var bar = '5'
+alert ( foo * bar )  	// treated as a number, output is 25
+
+var foo = 5
+var bar = '5'
+alert ( foo / bar )		// treated as a number, output is 1
+
+var foo = 5
+var bar = 'b'
+alert ( foo * bar )		// output should be a NaN
+
+
+
+// Turn a value into a number
+
+var foo = '55'
+var myNumber = Number(foo)	// make foo which is a string into a number
+
+// Check if output is a number post conversion
+
+if ( !isNaN (myNumber) ) {			// use double negative - if not not a number
+	alert('It is not a number!')
+}
+
+
+
+
+/**
+ * Finding Patterns in strings
+ */
+
+var phrase = 'this is a simple phrase.'
+
+phrase.length						// this checks the lenght of the string, including spaces
+alert ( phrase.toUpperCase() )		// converts the string to upper case
+
+
+// String comparison
+
+var str1 = 'Helo'
+var str2 ='hello'
+
+str1 == str2 		// false
+str1 === str2 		// false
+
+
+// check if the strings are the same word or not
+
+if ( str1.toLowerCase() == str2.toLowerCase() ) {
+	alert('Yes, the strings are the same word.')
+
+} else alert('No, the strings are different words.')
+
+
+
+
+/**
+ * Finding Patterns in Strings
+ */
+
+var phrase = 'We want a groovy key word.'
+
+var position = phrase.indexOf ('groovy') 	// this will give me the first placement of 'groovy'
+											// the count starts at 0, 'w' in 'we' is 0
+											// 'groovy' starts at 10
+
+var position = alert( phrase.lastIndexOf('word') )	// Find the last occurance of a word in string
+
+
+// Determine if a word occurs in a string
+// Returns -1 when term is not found
+
+if ( phrase.indexOf('dddd') == -1 ) {
+	alert('That word is not in the string.')
+}
+
+
+// String Methods - SLICE
+// This allows you to pull out parts of a string and store it in another variable
+// other methods are .substring() and .substr()
+
+var phrase = 'Yet another phrase.'
+			//0123456
+
+var segment = phrase.slice(6,11)	// pull out the char on the 6th position to th 10th
+
+
+// String Comparison
+
+var lowerCaseA = 'a'
+var upperCaseA = 'A'
+
+lowerCaseA < upperCaseA		// false, capital letters come before lower case
 
 
 
