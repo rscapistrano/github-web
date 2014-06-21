@@ -70,6 +70,54 @@ delete animal1.color
 
 
 /**
+ * Working with Arrays
+ * 	-	Arrays have an internal order
+ * 	-	Contains elements; collections
+ * 	-	0-based, first position is 0
+ */
+
+var multiValues = []
+
+multiValues[0] = 50		// set index 0 = 50
+
+multiValues[1] = 123	// set index 1 = 123
+
+multiValues[2] = 'Secured Kitty'	// set index 2 = 'Secured Kitty'
+
+// OR
+var multiValues = [ 50, 123, 'Secured Kitty']
+
+
+
+// Iterating Through Collections
+
+var i = 0 										// start at zero
+
+while ( i < multiValues.length ) {				// check condition
+
+	alert('The value is ' + multiValues[i])		// use the index to access the current element
+
+	i++											// increment the index
+}
+
+
+// New array sample
+
+var myArray = [123, 1232, 456, 12]
+
+var total = 0
+
+for ( var i = 0; i < myArray.length; i++ ) {
+	total = total + myArray[i]				// add the current element to the total
+}
+
+alert('The total is ' + total)				// show answer after we are done with the loop
+
+
+
+
+
+/**
  * References
  * This statement does not make the same copy of an object so changes to animal2 will apply to animal1.
  * This gives you two objects that point to the same value. You will only run into this when dealing with objects.
@@ -77,21 +125,6 @@ delete animal1.color
  */
 
 var animal2 = animal1
-
-
-
-
-// Regular Expressions
-
-var string1 = 'this is the best video'
-var string2 = 'i love this video'
-var string3 = 'it is the best ever'
-
-var regex = /this/
-
-console.log( regex.test(string1) )
-console.log( regex.test(string2) )
-console.log( regex.test(string3) )
 
 
 
@@ -740,6 +773,76 @@ var lowerCaseA = 'a'
 var upperCaseA = 'A'
 
 lowerCaseA < upperCaseA		// false, capital letters come before lower case
+
+
+
+
+/**
+ * Regular Expressions
+ */
+
+
+var myReg = /^hello/			// ^ at the start
+
+var myReg = /hello$/			// $ at the end
+
+var myReg = /hel+o/				// + once or more (hello, helo, hellllllo)
+
+var myReg = /hel*o/				// * zero or more (heo, hello, helo, hellllllo)
+
+var myReg = /hel?o/				// ? zero or one (heo, helo)
+
+var myReg = /hello|goodbye/		// either | or
+
+var myReg = /he..o/				// . any character
+
+var myReg = /\wello/			// \w alphanumeric or _
+
+var myReg = /\bhello/			// \b word boundary such as a space or new line
+
+var myReg = /[crnld]ope/		// [...] range of characters
+
+var myReg = /^[0-9]{5} (?:-[0-9]{4}?$)/		// identifying a zip code
+
+var myReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/	// identify email address
+
+var myString = 'Does this sentence have the word hello in it?'
+	if ( myReg.test(myString)) {
+		alert('Yup!')
+	};
+
+
+
+// Regular Expressions
+
+var string1 = 'this is the best video'
+var string2 = 'i love this video'
+var string3 = 'it is the best ever'
+
+var regex = /this/
+
+console.log( regex.test(string1) )
+console.log( regex.test(string2) )
+console.log( regex.test(string3) )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
