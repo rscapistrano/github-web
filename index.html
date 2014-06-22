@@ -2,7 +2,110 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>CSS Garden</title>
+        <title>Shopping for Oil</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
+    <header></header>
+    <body>
+
+    	<h1>Sample Form</h1>
+
+    	<form class='cart' id='cart-oil'>
+    		<div class='item'>
+    			<h2>Extra Virgin, Cold-Pressed</h2>
+    			<p>You've never tasted olive oil this good.</p>
+
+    			<div class='info'>
+    				<span>Price: $10/bottle</span>
+    			</div>
+
+    			<div class='order'>
+    				<label for='txt-q-extra'>Quantity desired:</label>
+    				<input type='text' id='txt-q-extra' size='3' placeholder='0'>
+    			</div>
+    		</div>
+
+    		<div class='item'>
+    			<h2>Cold-Pressed</h2>
+    			<p>Ideal for cooking.</p>
+
+    			<div class='info'>
+    				<span>Price: $8/bottle</span>
+    			</div>
+
+    			<div class='order'>
+    				<label for='txt-q-cold'>Quantity desired:</label>
+    				<input type='text' id='txt-q-cold' size='3' placeholder='0'>
+    			</div>
+    		</div>
+
+
+    		<div class='item'>
+    			<h2>Garlic Infused</h2>
+    			<p>This is for the garlic lovers.</p>
+
+    			<div class='info'>
+    				<span>Price: $10/bottle</span>
+    			</div>
+
+    			<div class='order'>
+    				<label for='txt-q-garlic'>Quantity desired:</label>
+    				<input type='text' id='txt-q-garlic' size='3' placeholder='0'>
+    			</div>
+    		</div>
+
+    		<div class='summary'>
+    			<h2>Estimate Order</h2>
+    			<div class='group state'>
+    				<label for='s-state'>State:</label>
+    				<select id='s-state'>
+    					<option value=''> - select - </option>
+    					<option value='CA'>California (7.5% tax)</option>
+    					<option value='IL'>Illinois</option>
+    					<option value='NY'>New York</option>
+    				</select>
+    			</div>
+
+    		</div>
+
+    		<div class='group method'>
+    			<label for='r-method-pickup'>Shipping Method</label><br>
+    			<input type='radio' value='pickup' name='r_method' id='r-method-pickup' checked>
+
+    			<label for='r-method-pickup'>Pickup (free)</label><br>
+    			<input type='radio' value='ups' name='r_method' id='r0method-ups'>
+
+    			<label for='r-method-ups'>UPS ($3/bottle)</label>
+
+    			</div>
+
+    		<div class='group special'>
+    			<label for='c-special-gift'> Special: </label>
+    			<input type='checkbox' value='YES' id='c-special-gift'>
+    			<label for='c-special-gift'> This is a gift </label><br>
+
+    			<input type='checkbox' value='YES' id='c-special-gold'>
+    			<label for='c-special-gold'>Use gold-flecked bottles</label><br>
+
+    			<input type='checkbox' value='YES' id='c-special-cork'>
+    			<label for='c-special-cork'>Use plastic caps instead of cork</label><br>
+    		</div>
+
+
+    		<div class='group calc'>
+    			<p>
+    				<!--<label for='btn-estimate'> Click to estimate: </label> -->
+    				<input type='submit' value='Click to Estimate Total' id='btn-estimate'>
+    				<input type='text' id='txt-estimate' placeholder='$0.00'>
+    			</p>
+
+    			<div id='results'></div>
+    		</div>
+
+    	</div>
+
+    	</form>
+
+
+    </body>
 </html>
