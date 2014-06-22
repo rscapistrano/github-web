@@ -1,5 +1,5 @@
 /** JavaScript
- * - Weak typing
+ *   s- Weak typing
  *
  * Operators with =
  *	= assignment
@@ -19,6 +19,22 @@
  *   
  */
 
+
+
+/**
+ * DOM - Document Object Language
+ * 	It's a web page pieces with agreed upon/set of terms
+ *
+ * What can you do with the DOM?
+ *  - get title text
+ *  - get 2nd paragraph
+ *  - get 3rd link in the menu and set it to invisible
+ *  - change the background color of all paragraphs
+ *  - get all the elements in the list
+ *  - find the image called 'cutekitty' and move it 40 pixels to the right
+ *  - change a link so it performs a JavaScript function when clicked
+ *  
+ */
 
 
 // Call Prompt in JS
